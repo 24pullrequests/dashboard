@@ -1,6 +1,5 @@
 require 'twitter'
 
-
 #### Get your twitter keys & secrets:
 #### https://dev.twitter.com/docs/auth/tokens-devtwittercom
 twitter = Twitter::REST::Client.new do |config|
@@ -10,7 +9,7 @@ twitter = Twitter::REST::Client.new do |config|
   config.access_token_secret = 'YOUR_OAUTH_SECRET'
 end
 
-search_term = URI::encode('#todayilearned')
+search_term = URI::encode('24pullrequests')
 
 SCHEDULER.every '10m', :first_in => 0 do |job|
   begin
