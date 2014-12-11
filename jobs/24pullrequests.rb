@@ -27,3 +27,11 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
     last: yesterday[:results].count
   })
 end
+
+SCHEDULER.every '5m', :first_in => 0 do |job|
+  users = HTTParty.get('http://24pullrequests.com/users.json')
+  users = users.take(18).map do |user|
+    {label: user['nickname'], value: user['pull_requests'].count }
+  end
+  send_event('top_pr_count', items: users)
+end
