@@ -1,4 +1,5 @@
 require 'httparty'
+require 'pry'
 
 def pull_requests(date, page = 1)
   result = HTTParty.get("http://24pullrequests.com/pull_requests.json?page=#{page}")
@@ -34,4 +35,15 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
     {label: user['nickname'], value: user['pull_requests'].count }
   end
   send_event('top_pr_count', items: users)
+end
+
+SCHEDULER.every '5m', :first_in => 0 do |job|
+  orgs = HTTParty.get('http://24pullrequests.com/organisations.json')
+  orgs = orgs.take(8).map do |org|
+    count = org['users'].inject(0) do |memo, user|
+      memo + user['pull_requests_count']
+    end
+    {label: org['login'], value: count }
+  end
+  send_event('top_pr_org_count', items: orgs)
 end
