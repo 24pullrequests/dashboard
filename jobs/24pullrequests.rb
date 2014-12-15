@@ -39,11 +39,13 @@ end
 
 SCHEDULER.every '5m', :first_in => 0 do |job|
   orgs = HTTParty.get('http://24pullrequests.com/organisations.json')
-  orgs = orgs.take(8).map do |org|
+  orgs = orgs.map { |org|
     count = org['users'].inject(0) do |memo, user|
       memo + user['pull_requests_count']
     end
     {label: org['login'], value: count }
-  end
+  }.sort { |a, b|
+    a['value'] <=> b['value']
+  }.take(8)
   send_event('top_pr_org_count', items: orgs)
 end
