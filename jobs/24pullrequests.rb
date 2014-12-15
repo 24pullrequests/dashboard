@@ -47,3 +47,10 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
   end
   send_event('top_pr_org_count', items: orgs)
 end
+
+SCHEDULER.every '5m', :first_in => 0 do |job|
+  pull_requests = HTTParty.get('http://24pullrequests.com/pull_requests/meta.json')
+  send_event('total_prs', {
+    current: pull_requests['count']
+  })
+end
