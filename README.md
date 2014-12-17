@@ -19,11 +19,7 @@ Fork the repository and then clone it locally.
 
 `bundle install` from within the dashing folder.
 
-You should also install the `dashing` gem:
-
-`gem install dashing`
-
-To start the server, run `dashing start` and then view the awesome at `localhost:3030`
+To start the server, run `bundle exec dashing start` and then view the awesome at `localhost:3030`
 
 ## Contributing
 
