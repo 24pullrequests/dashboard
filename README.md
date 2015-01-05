@@ -33,4 +33,4 @@ If you receive the error `Unable to activate pry-byebug-1.3.2` whilst `bundle in
 
 # Copyright
 
-Copyright (c) 2014 Andrew Nesbitt.
+Copyright (c) 2015 Andrew Nesbitt.
