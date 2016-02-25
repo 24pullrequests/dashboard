@@ -21,7 +21,7 @@ GEM
       sprockets (~> 2.10.1)
       thin (~> 1.6.1)
       thor (~> 0.18.1)
-    domain_name (0.5.20160128)
+    domain_name (0.5.20160216)
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.10)
     eventmachine (1.0.9.1)
