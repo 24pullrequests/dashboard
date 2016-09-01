@@ -8,7 +8,10 @@ class Dashing.Countdown extends Dashing.Widget
     end_timestamp = Math.round( Date.parse($(@node).find(".more-info").html())/1000 )
     seconds_until_end = end_timestamp - current_timestamp
     if seconds_until_end < 3600
-      $(@node).parent().remove()
+      gridster = $('.gridster ul:first').data('gridster')
+      gridster.remove_from_gridmap($(@node).parent())
+      gridster.remove_widget($(@node).parent(), true)
+      $(@node).empty()
     else if seconds_until_end < 0
       @set('timeleft', "TIME UP!")
       for i in [0..100] by 1
