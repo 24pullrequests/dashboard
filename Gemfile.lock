@@ -27,7 +27,7 @@ GEM
     equalizer (0.0.11)
     eventmachine (1.2.1)
     execjs (2.0.2)
-    faraday (0.10.0)
+    faraday (0.10.1)
       multipart-post (>= 1.2, < 3)
     hike (1.2.3)
     http (2.1.0)
@@ -115,4 +115,4 @@ RUBY VERSION
    ruby 2.3.3p112
 
 BUNDLED WITH
-   1.13.6
+   1.13.7
