@@ -22,10 +22,10 @@ GEM
       sprockets (~> 2.10.1)
       thin (~> 1.6.1)
       thor (> 0.18.1)
-    domain_name (0.5.20161129)
+    domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.11)
-    eventmachine (1.2.2)
+    eventmachine (1.2.3)
     execjs (2.0.2)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
@@ -84,7 +84,7 @@ GEM
       eventmachine (~> 1.0, >= 1.0.4)
       rack (~> 1.0)
     thor (0.19.4)
-    thread_safe (0.3.5)
+    thread_safe (0.3.6)
     tilt (1.4.1)
     twitter (6.1.0)
       addressable (~> 2.5)
@@ -115,4 +115,4 @@ RUBY VERSION
    ruby 2.3.3p112
 
 BUNDLED WITH
-   1.14.4
+   1.14.5
