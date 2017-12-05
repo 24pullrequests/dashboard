@@ -31,9 +31,11 @@ end
 
 SCHEDULER.every '5m', :first_in => 0 do |job|
   users = HTTParty.get('http://24pullrequests.com/users.json')
-  users = users.take(18).map do |user|
+  users = users.map do |user|
     {label: user['nickname'], value: user['pull_requests'].count }
   end
+  users.sort! { |a, b| b[:value] <=> a[:value] }
+  users = users.take(18)
   send_event('top_pr_count', items: users)
 end
 
@@ -45,7 +47,7 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
     end
     {label: org['login'], value: count }
   }.sort { |a, b|
-    a['value'] <=> b['value']
+    b[:value] <=> a[:value]
   }.take(8)
   send_event('top_pr_org_count', items: orgs)
 end
