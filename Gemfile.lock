@@ -57,7 +57,7 @@ GEM
       rack (>= 1.0, < 3)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
-    sass (3.2.19)
+    sass (3.5.4)
     simple_oauth (0.3.1)
     sinatra (1.4.8)
       rack (~> 1.5)
