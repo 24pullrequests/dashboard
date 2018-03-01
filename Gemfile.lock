@@ -53,7 +53,7 @@ GEM
     rack (1.5.5)
     rack-protection (1.5.4)
       rack
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
