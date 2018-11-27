@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.0'
 
-gem 'dashing'
+gem 'smashing'
 gem 'httparty'
 gem 'pry'
 
