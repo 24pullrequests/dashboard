@@ -6,7 +6,7 @@
 
 This is the dashboard that helps us keep track of what's happening! You can help us build it too.
 
-The dashboard is built on [Dashing](http://shopify.github.com/dashing)
+The dashboard is built on [Dashing](http://shopify.github.com/dashing).
 
 # Development
 
@@ -19,7 +19,7 @@ Fork the repository and then clone it locally.
 
 `bundle install` from within the dashing folder.
 
-To start the server, run `bundle exec dashing start` and then view the awesome at `localhost:3030`
+To start the server, run `bundle exec dashing start` and then view the awesome at `localhost:3030`.
 
 ## Contributing
 
