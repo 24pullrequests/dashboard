@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y nodejs \
     && bundle
 
 EXPOSE 3030
-CMD bundle exec dashing start
+CMD bundle exec smashing start
