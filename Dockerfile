@@ -1,4 +1,4 @@
-FROM ruby:2.5.3
+FROM ruby:3.0.3
 
 COPY . /code
 WORKDIR /code
@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y nodejs \
     && bundle
 
 EXPOSE 3030
-CMD bundle exec dashing start
+CMD bundle exec smashing start

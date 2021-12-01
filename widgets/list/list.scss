@@ -31,11 +31,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   li {
-    margin-bottom: 3px;
-  }
-
-  span {
-    line-height: 20px;
+    margin-bottom: 5px;
   }
 
   .list-nostyle {
@@ -44,12 +40,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .label {
     color: $label-color;
-    display:inline-block;
-    width:180px;
-    white-space: nowrap;
-    overflow:hidden !important;
-    text-overflow: ellipsis;
-    padding-bottom: 2px;
   }
 
   .value {
